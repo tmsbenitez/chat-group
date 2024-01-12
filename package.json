@@ -1,11 +1,33 @@
 {
   "name": "chat-group",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "author": "Tomas Benitez",
-  "license": "ISC"
+  "dependencies": {
+    "@supabase/supabase-js": "^2.26.0",
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "cloudinary": "^1.40.0",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "8.5.1",
+    "next": "13.4.8",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-textarea-autosize": "^8.5.2",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.6",
+    "@types/jsonwebtoken": "8.5.1"
+  }
 }

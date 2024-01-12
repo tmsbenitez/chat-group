@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #151515;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #060606;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #030303;
+}
+
+.mesher {
+  background-color: #a5ff99;
+  animation: animate-mesher 10s linear infinite;
+  background-size: 200% 200%;
+  background-image: radial-gradient(
+      at 13% 72%,
+      hsla(143, 62%, 65%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 44% 61%, hsla(140, 83%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 46% 17%, hsla(164, 71%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 1% 89%, hsla(225, 99%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 47% 44%, hsla(283, 67%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 1% 24%, hsla(138, 78%, 60%, 1) 0px, transparent 50%);
+}
+
+@keyframes animate-mesher {
+  0% {
+		background-position: 0% 20%;
+	}
+	25% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+  75% {
+    background-position: 20% 40%;
+  }
+	100% {
+		background-position: 0% 20%;
+	}
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
